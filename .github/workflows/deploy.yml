@@ -26,10 +26,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
+          # Cache disabled: No package-lock.json available in manual upload
+          # cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        # 'npm ci' requires a lockfile. We use 'npm install' to generate one on the fly.
+        run: npm install
 
       - name: Execute Transmutation (Build)
         run: npm run build

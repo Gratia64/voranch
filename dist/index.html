@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V.O. Ranch Interface</title>
+    
+    <!-- [Style] Tailwind CSS Framework (CDN for rapid deployment) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- [Config] Tailwind Theme Extension -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              stone: {
+                850: '#1f1f1f',
+              },
+              amber: {
+                950: '#2a1b0e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-stone-100 text-stone-900">
+    <!-- [Mount] The sacred point where React shall manifest -->
+    <div id="root"></div>
+
+    <!-- [Logic] The Transmuted Code 
+         This assumes your VOR.jsx has been compiled into 'bundle.js' 
+         and placed in the 'dist' folder alongside this HTML file. 
+    -->
+    <script src="/bundle.js"></script>
+  </body>
+</html>
